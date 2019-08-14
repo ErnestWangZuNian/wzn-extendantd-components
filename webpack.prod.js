@@ -11,7 +11,7 @@ module.exports = merge(common, {
     output: {
         filename: 'index.js',
         path: resolve('dist'),
-        library: 'wzn-ui-components',
+        library: 'wzn-extendantd-components',
         libraryTarget: 'umd',
         libraryExport: 'default',
         globalObject: 'this',
