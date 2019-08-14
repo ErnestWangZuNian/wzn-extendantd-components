@@ -1,6 +1,6 @@
 const { Input } = antd;
 
-class NumberInput extends React.Component {
+export default class NumberInput extends React.Component {
   // static defaultProps = {};
 
   // static propTypes = {};
@@ -20,4 +20,3 @@ class NumberInput extends React.Component {
     return <Input placeholder="number-input" />;
   }
 }
-export default NumberInput;
