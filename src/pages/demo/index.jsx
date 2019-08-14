@@ -28,7 +28,7 @@ class App extends React.Component {
               console.log('1111');
             }}
           >
-            demo
+            demo测试
           </Button>
         </div>
       </div>
