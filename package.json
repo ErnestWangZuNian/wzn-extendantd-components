@@ -1,7 +1,7 @@
 {
-  "name": "wzn-extendantd-components",
-  "version": "0.0.1",
-  "description": "扩展antd组件",
+  "name": "wzn-ui-components",
+  "version": "2.0.2",
+  "description": "",
   "main": "lib/indexjs",
   "module": "es/index.js",
   "files": [
@@ -18,18 +18,19 @@
     "build:lib": "cross-env OUTPUT_MODULE=commonjs babel src/components -d lib --ignore **/__tests__",
     "build:es": "babel src/components -d es --ignore **/__tests__",
     "publish": "cross-env npm run build && npm publish --access=public",
+    "theme": "node theme.js",
     "lint": "eslint --ext .jsx,.js src/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ErnestWangZuNian/wzn-extendantd-components.git"
+    "url": "git+https://github.com/ErnestWangZuNian/react-in-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ErnestWangZuNian/wzn-extendantd-components/issues"
+    "url": "https://github.com/ErnestWangZuNian/react-in-project/issues"
   },
-  "homepage": "https://github.com/ErnestWangZuNian/wzn-extendantd-components#readme",
+  "homepage": "https://github.com/ErnestWangZuNian/react-in-project#readme",
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
