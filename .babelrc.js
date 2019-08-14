@@ -25,6 +25,9 @@ module.exports = {
       },
     ],
     '@babel/preset-react',
+    'react',
+    'es2015',
+    'stage-0'
   ],
   plugins: [
     '@babel/plugin-transform-runtime',
