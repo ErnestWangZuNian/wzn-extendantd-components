@@ -25,7 +25,8 @@
     "build:lib": "cross-env OUTPUT_MODULE=commonjs babel src/components -d lib --ignore **/__tests__",
     "build:es": "babel src/components -d es --ignore **/__tests__",
     "publish": "cross-env npm run build && npm publish --access=public",
-    "theme": "node theme.js",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
     "lint": "eslint --ext .jsx,.js src/"
   },
   "repository": {
@@ -48,6 +49,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.4.5",
+    "@emotion/core": "^10.0.16",
     "autoprefixer": "^8.6.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
@@ -61,6 +63,9 @@
     "cpx": "^1.5.0",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.10",
+    "docz": "^1.2.0",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^1.2.0",
     "eslint": "^5.15.3",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.12.4",
@@ -108,6 +113,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "less": "^3.5.2",
+    "react": "^16.9.0",
     "react-router-dom": "^4.3.1"
   }
 }

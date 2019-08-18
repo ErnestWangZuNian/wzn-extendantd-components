@@ -11,6 +11,9 @@
 /lib
 /es
 
+# doc
+/.docz
+
 # misc
 .DS_Store
 .env.local

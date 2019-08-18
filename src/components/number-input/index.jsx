@@ -1,13 +1,18 @@
-const { Input } = antd;
+
+import { Input } from 'antd';
+import React from 'react';
 
 const style = require('./style.scss');
 
-style.use();
+if (style.use) {
+  style.use();
+}
+
 
 export default class NumberInput extends React.Component {
-  // static defaultProps = {};
+  static defaultProps = {};
 
-  // static propTypes = {};
+  static propTypes = {};
 
   constructor(props) {
     super(props);
