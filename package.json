@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "cross-env rm -rf dist lib es  && mkdir dist lib es",
+    "clean:all": "cross-env rm -rf dist lib es .docz",
+    "clean": "cross-env rm -rf dist lib es .docz && mkdir dist lib es",
     "start": "cross-env webpack-dev-server --open --config webpack.dev.js",
     "build": "cross-env npm run clean && npm run build:umd && npm run build:lib && npm run build:es && npm run build:css",
     "build:css": "cross-env npm run clean && gulp",
