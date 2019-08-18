@@ -1,5 +1,9 @@
 const { Input } = antd;
 
+const style = require('./style.scss');
+
+style.use();
+
 export default class NumberInput extends React.Component {
   // static defaultProps = {};
 
@@ -10,13 +14,13 @@ export default class NumberInput extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
   render() {
-    return <Input placeholder="number-input" />;
+    return <Input placeholder="number-input" className="components-numberinput-container" />;
   }
 }
