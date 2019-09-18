@@ -16,16 +16,23 @@ class App extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentDidUpdate() { }
+  componentDidUpdate() {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
   render() {
     return (
       <div className="demo-container">
-        <NumberInput />
+        <NumberInput
+          isDecimal
+          decimalMaxLen={8}
+          maxLen={4}
+          onChange={(e) => {
+            console.log(e, 'ww');
+          }}
+        />
         <Button
           type="primary"
           onClick={() => {

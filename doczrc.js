@@ -1,4 +1,4 @@
-import { css } from 'docz-plugin-css'
+import { css } from 'docz-plugin-css';
 
 export default {
   title: 'wzn-extendantd-components',
@@ -7,7 +7,6 @@ export default {
     css({
       preprocessor: 'sass',
       cssmodules: true,
-    })
-  ]
-}
-
+    }),
+  ],
+};
