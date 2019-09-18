@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div className="demo-container">
         <NumberInput
-          isDecimal
+          isFloatNumber
           decimalMaxLen={8}
           maxLen={4}
           onChange={(e) => {

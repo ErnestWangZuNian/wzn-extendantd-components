@@ -117,6 +117,8 @@ export default class NumberInput extends React.Component {
         tempArr.forEach((item, index) => {
           if (index < tempArr.length - 1) {
             newValue = `${newValue}${item}`;
+          } else if (newValue.length > maxLen) {
+            newValue = `${newValue.slice(0, maxLen)}.${tempArr[index - 1]}`;
           } else {
             newValue = `${newValue}.${item}`;
           }
