@@ -22,5 +22,6 @@ module.exports = {
     'linebreak-style': [0, 'error', 'windows'],
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'react/forbid-prop-types': 0,
+    'react/sort-comp': 0
   },
 };

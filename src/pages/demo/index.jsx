@@ -13,7 +13,9 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isFloatNumber: true,
+    };
   }
 
   componentDidMount() {}
@@ -23,10 +25,11 @@ class App extends React.Component {
   componentWillUnmount() {}
 
   render() {
+    const { isFloatNumber } = this.state;
     return (
       <div className="demo-container">
         <NumberInput
-          isFloatNumber
+          isFloatNumber={isFloatNumber}
           decimalMaxLen={8}
           maxLen={4}
           onChange={(e) => {
@@ -36,7 +39,9 @@ class App extends React.Component {
         <Button
           type="primary"
           onClick={() => {
-            console.log('1111');
+            this.setState({
+              isFloatNumber: !isFloatNumber,
+            });
           }}
         >
           demo

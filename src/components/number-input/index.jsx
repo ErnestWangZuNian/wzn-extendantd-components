@@ -9,17 +9,6 @@ if (style.use) {
 }
 
 export default class NumberInput extends React.Component {
-  static defaultProps = {
-    isFloatNumber: false,
-    isIntNumber: true,
-    isNegativeNumber: false,
-    isAllowZeroBegin: false,
-    isPositiveNumber: false,
-    decimalMaxLen: 2,
-    maxLen: 10,
-    onChange: null,
-  };
-
   static propTypes = {
     /** 是否支持浮点小数 */
     isFloatNumber: PropTypes.bool,
@@ -37,6 +26,17 @@ export default class NumberInput extends React.Component {
     decimalMaxLen: PropTypes.number,
     /** onChange事件 */
     onChange: PropTypes.func,
+  };
+
+  static defaultProps = {
+    isFloatNumber: false,
+    isIntNumber: true,
+    isNegativeNumber: false,
+    isAllowZeroBegin: false,
+    isPositiveNumber: false,
+    decimalMaxLen: 2,
+    maxLen: 10,
+    onChange: null,
   };
 
   constructor(props) {
