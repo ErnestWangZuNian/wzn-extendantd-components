@@ -17,15 +17,18 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean:all": "cross-env rm -rf dist lib es .docz",
-    "clean": "cross-env rm -rf dist lib es .docz && mkdir dist lib es",
+    "clean:all": "rm -rf dist lib es .docz",
+    "clean": "rm -rf dist lib es .docz && mkdir dist lib es",
+    "clean:lib": "rm -rf lib  && mkdir lib",
+    "clean:umd": "rm -rf dist && mkdir dist",
+    "clean:es": "rm -rf es && mkdir es",
     "start": "cross-env webpack-dev-server --open --config webpack.dev.js",
     "build": "cross-env npm run clean && npm run build:umd && npm run build:lib && npm run build:es && npm run build:css",
-    "build:css": "cross-env npm run clean && gulp",
-    "build:umd": "cross-env npm run clean && webpack --config webpack.prod.js",
-    "build:lib": "cross-env OUTPUT_MODULE=commonjs babel src/components -d lib --ignore **/__tests__",
-    "build:es": "babel src/components -d es --ignore **/__tests__",
-    "release": "npm version patch && cross-env npm run build && npm publish --access=public",
+    "build:css": "gulp",
+    "build:umd": "cross-env npm run clean:umd && webpack --config webpack.prod.js",
+    "build:lib": "cross-env npm run clean:lib && cross-env OUTPUT_MODULE=commonjs babel src/components -d lib --ignore **/__tests__",
+    "build:es": "cross-env npm run clean:es && babel src/components -d es --ignore **/__tests__",
+    "release": "npm version patch && npm run build && npm publish --access=public",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "lint": "eslint --ext .jsx,.js src/"
@@ -89,8 +92,6 @@
     "postcss-loader": "^2.1.5",
     "postcss-scss": "^1.0.4",
     "react-hot-loader": "^4.0.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "ts-loader": "^6.0.2",
@@ -107,7 +108,6 @@
     "babel-plugin-import": "^1.8.0",
     "babel-plugin-react-css-modules": "^3.3.3",
     "classnames": "^2.2.6",
-    "create-react-class": "^15.6.3",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -116,6 +116,8 @@
     "less": "^3.5.2",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "wzn-base-components": "^1.0.3",
+    "wzn-utils": "^2.0.8"
   }
 }

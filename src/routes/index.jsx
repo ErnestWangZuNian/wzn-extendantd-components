@@ -1,6 +1,7 @@
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import { AsyncComponent } from 'wzn-base-components';
 
-import Demo from '../pages/demo';
+const Demo = AsyncComponent(() => import('@/pages/demo'));
 
 const Router = (
   <HashRouter>
