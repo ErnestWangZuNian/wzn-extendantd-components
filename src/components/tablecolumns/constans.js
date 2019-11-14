@@ -1,1 +1,2 @@
-export const ROW_CALSS_PREFIX = 'component-table-row';
+export const COMPONENT_TABLE_ROW = 'component-table-row';
+export const COMPONENT_TABLE_ROW_WEIGHT = `${COMPONENT_TABLE_ROW}-weight`;
