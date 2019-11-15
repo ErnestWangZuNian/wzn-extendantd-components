@@ -7,7 +7,7 @@ const { Table, Nodata } = antd;
 @Page({
   style: require('./style.scss'),
 })
-class ComponentTab extends React.Component {
+class ComponentTable extends React.Component {
     static propTypes = {
       /** 列表选项 */
       columns: PropTypes.array.isRequired,
@@ -47,4 +47,4 @@ class ComponentTab extends React.Component {
       );
     }
 }
-export default ComponentTab;
+export default ComponentTable;
