@@ -11,6 +11,7 @@ class ComponentTable extends React.Component {
     static propTypes = {
       /** 列表选项 */
       columns: PropTypes.array.isRequired,
+      /** 类名 */
       className: PropTypes.any.isRequired,
     };
 

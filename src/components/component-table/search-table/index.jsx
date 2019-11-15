@@ -2,7 +2,6 @@ import { Page } from 'wzn-base-components';
 import classNames from 'classnames';
 import Table from '../table';
 
-
 @Page({
   style: require('./style.scss'),
 })
@@ -10,6 +9,7 @@ class ComponentSearchTable extends React.Component {
   static propTypes = {
     /** 列表选项 */
     columns: PropTypes.array.isRequired,
+    /** 类名选项 */
     className: PropTypes.any.isRequired,
   };
 
