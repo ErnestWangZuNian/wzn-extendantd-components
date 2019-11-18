@@ -38,7 +38,6 @@ class ComponentSearchTable extends React.Component {
       <div className={classNames('component-searchtable-container', className)}>
         <Table {...moreProps} />
       </div>
-
     );
   }
 }
