@@ -2,21 +2,20 @@ import { Page } from 'wzn-base-components';
 import classNames from 'classnames';
 import tableColumns from '../tablecolumns';
 
-
 const { Table, Nodata } = antd;
 
 @Page({
   style: require('./style.scss'),
 })
-class ComponentTab extends React.Component {
+class ComponentTable extends React.Component {
     static propTypes = {
       /** 列表选项 */
       columns: PropTypes.array.isRequired,
+      /** 类名 */
       className: PropTypes.any.isRequired,
     };
 
-    static defaultProps = {
-    };
+    static defaultProps = {};
 
     constructor(props) {
       super(props);
@@ -44,9 +43,9 @@ class ComponentTab extends React.Component {
             emptyText: <Nodata />,
           }}
           columns={tableColumns.dealColumns(columns)}
-          className={classNames('component-tab-container', className)}
+          className={classNames('component-table-container', className)}
         />
       );
     }
 }
-export default ComponentTab;
+export default ComponentTable;

@@ -28,36 +28,32 @@ class Demo extends React.Component {
     const { isFloatNumber } = this.state;
     const columns = [
       {
-        title: '姓名',
+        title: '金额',
         dataIndex: 'name',
         weight: true,
-        key: 'name',
-        // render: (text) => {
-        //   const result = `1111-${text}`;
-        //   return result;
-        // },
+        format: Util.other.formatMoney,
+        render: (text) => {
+          const result = `${text}12`;
+          return result;
+        },
       },
       {
         title: '年龄',
         dataIndex: 'age',
-        key: 'age',
       },
       {
         title: '住址',
         dataIndex: 'address',
-        key: 'address',
       },
     ];
     const dataSource = [
       {
-        key: '1',
-        name: '胡彦斌',
+        name: '154541',
         age: 32,
         address: '西湖区湖底公园1号',
       },
       {
-        key: '2',
-        name: '胡彦祖',
+        name: '12222',
         age: 42,
         address: '西湖区湖底公园1号',
       },

@@ -1,0 +1,47 @@
+
+---
+name: Table
+---
+
+## Table
+
+增强antd Table组件，扩展Column数据对象可以加粗 自定义函数格式化返回值
+
+
+## 基础用法(文字加粗，格式化金额)
+
+```
+      const columns = [
+      {
+        title: '金额',
+        dataIndex: 'name',
+        weight: true,
+        format: Util.other.formatMoney,
+        render: (text) => {
+          const result = `${text}12`;
+          return result;
+        },
+      },
+      {
+        title: '年龄',
+        dataIndex: 'age',
+      },
+      {
+        title: '住址',
+        dataIndex: 'address',
+      },
+    ];
+    const dataSource = [
+      {
+        name: '154541',
+        age: 32,
+        address: '西湖区湖底公园1号',
+      },
+      {
+        name: '12222',
+        age: 42,
+        address: '西湖区湖底公园1号',
+      },
+    ];
+     <Table columns={columns} dataSource={dataSource} />
+```
