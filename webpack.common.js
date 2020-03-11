@@ -117,7 +117,6 @@ module.exports = {
   externals: {
     react: 'React',
     'react-router': 'ReactRouter',
-    'react-router-dom': 'ReactRouterDOM',
     moment: 'moment',
     antd: 'antd',
   },
