@@ -1,8 +1,8 @@
-import { Page } from 'wzn-base-components';
+import { Component } from 'wzn-base-components';
 import classNames from 'classnames';
 import Table from '../table';
 
-@Page({
+@Component({
   style: require('./style.scss'),
 })
 class ComponentSearchTable extends React.Component {

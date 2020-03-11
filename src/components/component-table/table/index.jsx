@@ -1,10 +1,10 @@
-import { Page } from 'wzn-base-components';
+import { Component } from 'wzn-base-components';
 import classNames from 'classnames';
-import tableColumns from './tablecolumns';
+import tableColumns from '../tablecolumns';
 
 const { Table, Nodata } = antd;
 
-@Page({
+@Component({
   style: require('./style.scss'),
 })
 class ComponentTable extends React.Component {
