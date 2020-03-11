@@ -2,7 +2,7 @@
   "name": "wzn-extendantd-components",
   "version": "0.0.16",
   "description": "",
-  "main": "dist/indexjs",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "browserslist": [
     "last 2 versions",
