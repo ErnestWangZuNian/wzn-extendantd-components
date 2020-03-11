@@ -1,6 +1,8 @@
 import { Page } from 'wzn-base-components';
 import { NumberInput, Table } from '../../components';
 
+console.log(Table, 'www');
+
 const { Button } = antd;
 @Page({
   style: require('./style.scss'),
