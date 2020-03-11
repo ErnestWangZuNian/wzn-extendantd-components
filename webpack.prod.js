@@ -14,7 +14,7 @@ module.exports = merge(common, {
     path: resolve('dist'),
     library: 'wzn-extendantd-components',
     libraryTarget: 'umd',
-    libraryExport: 'default',
-    globalObject: 'this',
+    // libraryExport: 'wzn-extendantd-components',
+    // globalObject: 'this',
   },
 });
