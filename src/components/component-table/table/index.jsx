@@ -1,13 +1,12 @@
+import { Component } from 'wzn-base-components';
 import classNames from 'classnames';
 import tableColumns from '../tablecolumns';
 
 const { Table, Nodata } = antd;
 
-const style = require('./style.scss');
-
-if (style.use) {
-  style.use();
-}
+@Component({
+  style: require('./style.scss'),
+})
 class ComponentTable extends React.Component {
   static propTypes = {
     /** 列表选项 */
