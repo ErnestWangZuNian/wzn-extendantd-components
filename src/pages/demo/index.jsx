@@ -1,7 +1,7 @@
 import { Page } from 'wzn-base-components';
-import { NumberInput, Table } from '../../../dist';
+import { NumberInput, Table, SearchTable } from '../../../dist';
 
-console.log(Table, 'www');
+console.log(NumberInput, Table, SearchTable, 'www');
 
 const { Button } = antd;
 @Page({
