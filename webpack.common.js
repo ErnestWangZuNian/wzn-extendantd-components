@@ -16,11 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: resolve('node_modules'),
-      },
-      {
         test: /\.js[x]?$/,
         enforce: 'pre',
         use: [
@@ -106,18 +101,9 @@ module.exports = {
     ],
   },
   resolve: {
-    // 别名
     alias: {
-      '@': context,
-      '@/components': path.join(__dirname, 'src/components'),
+      '@': path.resolve(__dirname, 'src'),
     },
     extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.less'],
-  },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    'react-router-dom': 'ReactRouterDOM',
-    moment: 'moment',
-    antd: 'antd',
   },
 };
