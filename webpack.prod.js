@@ -3,10 +3,9 @@ const path = require('path');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 const ModuleConcatPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
 const fs = require('fs');
-const common = require('./webpack.common.js');
 
 const resolve = dir => path.resolve(__dirname, dir);
-
+const common = require('./webpack.common.js');
 //  获取入口
 const getEntry = (componentsPath) => {
   const componentsDir = fs.readdirSync(resolve(componentsPath));

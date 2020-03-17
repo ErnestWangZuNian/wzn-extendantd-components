@@ -1,11 +1,10 @@
+import { Component } from 'wzn-base-components';
 import classNames from 'classnames';
 import Table from '../table';
 
-const style = require('./style.scss');
-
-if (style.use) {
-  style.use();
-}
+@Component({
+  style: require('./style.scss'),
+})
 class ComponentSearchTable extends React.Component {
   static propTypes = {
     /** 列表选项 */

@@ -55,7 +55,7 @@ module.exports = {
         exclude: resolve('node_modules'),
         use: [
           {
-            loader: 'style-loader/useable',
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
