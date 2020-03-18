@@ -1,14 +1,12 @@
-import { Input } from 'antd';
-import PropTypes from 'prop-types';
-import React from 'react';
 
-const style = require('./style.scss');
+import { Component } from 'wzn-base-components';
 
-if (style.use) {
-  style.use();
-}
+const { Input } = antd;
 
-export default class NumberInput extends React.Component {
+@Component({
+  style: require('./style.scss'),
+})
+class NumberInput extends React.Component {
   static propTypes = {
     /** 是否支持浮点小数 */
     isFloatNumber: PropTypes.bool,
@@ -166,3 +164,4 @@ export default class NumberInput extends React.Component {
     );
   }
 }
+export default NumberInput;

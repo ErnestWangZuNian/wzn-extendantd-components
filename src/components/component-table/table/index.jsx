@@ -2,10 +2,10 @@ import { Component } from 'wzn-base-components';
 import classNames from 'classnames';
 import tableColumns from '../tablecolumns';
 
-const { Table, Nodata } = antd;
+const { Table } = antd;
 
 @Component({
-  // style: require('./style.scss'),
+  style: require('./style.scss'),
 })
 class ComponentTable extends React.Component {
   static propTypes = {
@@ -13,6 +13,7 @@ class ComponentTable extends React.Component {
     columns: PropTypes.array.isRequired,
     /** 类名 */
     className: PropTypes.any.isRequired,
+    dataSource: PropTypes.array.isRequired,
   };
 
   static defaultProps = {};
@@ -35,14 +36,14 @@ class ComponentTable extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { columns, className, ...moreProps } = this.props;
+    const {
+      columns, className, dataSource = [], ...moreProps
+    } = this.props;
     return (
       <Table
         {...moreProps}
-        locale={{
-          emptyText: <Nodata />,
-        }}
         columns={tableColumns.dealColumns(columns)}
+        dataSource={dataSource}
         className={classNames('component-table-container', className)}
       />
     );

@@ -1,9 +1,10 @@
 import { Page } from 'wzn-base-components';
-import { NumberInput, Table } from '../../../dist';
+import { NumberInput, Table } from '@/components';
 
-console.log(Table, 'www');
 
 const { Button } = antd;
+
+console.log(Table, 'www');
 @Page({
   style: require('./style.scss'),
   form: true,
@@ -32,12 +33,12 @@ class Demo extends React.Component {
       {
         title: '金额',
         dataIndex: 'name',
-        weight: true,
-        format: Util.other.formatMoney,
-        render: (text) => {
-          const result = `${text}12`;
-          return result;
-        },
+        // weight: true,
+        // format: Util.other.formatMoney,
+        // render: (text) => {
+        //   const result = `${text}12`;
+        //   return result;
+        // },
       },
       {
         title: '年龄',
@@ -48,18 +49,18 @@ class Demo extends React.Component {
         dataIndex: 'address',
       },
     ];
-    const dataSource = [
-      {
-        name: '154541',
-        age: 32,
-        address: '西湖区湖底公园1号',
-      },
-      {
-        name: '12222',
-        age: 42,
-        address: '西湖区湖底公园1号',
-      },
-    ];
+    // const dataSource = [
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    // ];
     return (
       <div className="demo-container">
         <NumberInput
@@ -70,7 +71,7 @@ class Demo extends React.Component {
             console.log(e, 'ww');
           }}
         />
-        <Table columns={columns} dataSource={dataSource} />
+        <Table columns={columns} dataSource={[]} />
         <Button
           type="primary"
           onClick={() => {
