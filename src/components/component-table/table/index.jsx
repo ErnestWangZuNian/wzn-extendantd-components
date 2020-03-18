@@ -5,7 +5,7 @@ import tableColumns from '../tablecolumns';
 const { Table, Nodata } = antd;
 
 @Component({
-  style: require('./style.scss'),
+  // style: require('./style.scss'),
 })
 class ComponentTable extends React.Component {
   static propTypes = {

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Table from '../table';
 
 @Component({
-  style: require('./style.scss'),
+  // style: require('./style.scss'),
 })
 class ComponentSearchTable extends React.Component {
   static propTypes = {
