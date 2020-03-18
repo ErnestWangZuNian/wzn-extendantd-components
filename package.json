@@ -1,9 +1,9 @@
 {
   "name": "wzn-extendantd-components",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "",
   "main": "dist/index.js",
-  "module": "es/index.js",
+  "module": "dist/index.js",
   "browserslist": [
     "last 2 versions",
     "Android >= 4.0",
