@@ -61,7 +61,7 @@ module.exports = merge(
       open: true,
       proxy: {
         '/': {
-          target: 'https://api.douban.com',
+          target: 'https://api.apiopen.top',
           secure: false,
           changeOrigin: true,
           pathRewrite: {

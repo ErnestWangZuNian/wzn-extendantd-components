@@ -1,10 +1,8 @@
 import { Page } from 'wzn-base-components';
-import { NumberInput, Table } from '@/components';
+import { NumberInput, SearchTable } from '@/components';
 
 
 const { Button } = antd;
-
-console.log(Table, 'www');
 @Page({
   style: require('./style.scss'),
   form: true,
@@ -31,25 +29,70 @@ class Demo extends React.Component {
     const { isFloatNumber } = this.state;
     const columns = [
       {
-        title: '金额',
+        title: '标题',
         dataIndex: 'name',
-        // weight: true,
-        // format: Util.other.formatMoney,
-        // render: (text) => {
-        //   const result = `${text}12`;
-        //   return result;
-        // },
+        weight: true,
       },
       {
         title: '年龄',
         dataIndex: 'age',
       },
       {
-        title: '住址',
-        dataIndex: 'address',
+        title: '间介',
+        dataIndex: 'text',
       },
     ];
     // const dataSource = [
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '154541',
+    //     age: 32,
+    //     address: '西湖区湖底公园1号',
+    //   },
+    //   {
+    //     name: '12222',
+    //     age: 42,
+    //     address: '西湖区湖底公园1号',
+    //   },
     //   {
     //     name: '154541',
     //     age: 32,
@@ -71,7 +114,7 @@ class Demo extends React.Component {
             console.log(e, 'ww');
           }}
         />
-        <Table columns={columns} dataSource={[]} />
+        <SearchTable source="/getJoke" toolbar={<Button type="primary">新增</Button>} columns={columns} />
         <Button
           type="primary"
           onClick={() => {
